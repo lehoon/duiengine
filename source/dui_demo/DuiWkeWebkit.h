@@ -1,4 +1,6 @@
 #pragma once
+
+#ifdef HAS_WKE
 #include "wke.h"
 namespace DuiEngine
 {
@@ -57,3 +59,4 @@ namespace DuiEngine
 		CDuiStringW m_strUrl;
 	};
 }
+#endif

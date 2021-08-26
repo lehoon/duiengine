@@ -414,6 +414,7 @@ void CUIHander::OnTimer( UINT_PTR uEventID )
 
 void CUIHander::OnBtnWebkitGo()
 {
+#ifdef HAS_WKE
 	CDuiWkeWebkit *pWebkit= m_pMainDlg->FindChildByName2<CDuiWkeWebkit *>("wke_test");
 	if(pWebkit)
 	{
@@ -423,22 +424,27 @@ void CUIHander::OnBtnWebkitGo()
 		strUrl.ReleaseBuffer();
 		pWebkit->SetAttributeW("url",strUrl,FALSE);
 	}
+#endif
 }
 
 void CUIHander::OnBtnWebkitBack()
 {
+#ifdef HAS_WKE
 	CDuiWkeWebkit *pWebkit= m_pMainDlg->FindChildByName2<CDuiWkeWebkit *>("wke_test");
 	if(pWebkit)
 	{
 		wkeGoBack(pWebkit->GetWebView());
 	}
+#endif
 }
 
 void CUIHander::OnBtnWebkitFore()
 {
+#ifdef HAS_WKE
 	CDuiWkeWebkit *pWebkit= m_pMainDlg->FindChildByName2<CDuiWkeWebkit *>("wke_test");
 	if(pWebkit)
 	{
 		wkeGoForward(pWebkit->GetWebView());
 	}
+#endif
 }

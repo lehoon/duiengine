@@ -1,4 +1,5 @@
 #include "StdAfx.h"
+#ifdef HAS_WKE
 #include "DuiWkeWebkit.h"
 #include <Imm.h>
 #pragma comment(lib,"imm32.lib")
@@ -231,3 +232,4 @@ namespace DuiEngine
 		return !bLoading;
 	}
 }
+#endif
