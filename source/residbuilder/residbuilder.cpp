@@ -3,14 +3,28 @@
 
 #include "stdafx.h"
 #include "tinyxml/tinyxml.h"
+#include <comutil.h>  
+#pragma comment(lib, "comsuppw.lib")
 
-const wchar_t  RB_HEADER[]=
-L"/*<------------------------------------------------------------------------------------------------->*/\n"\
-L"/*该文件由residbuilder2生成，请不要手动修改*/\n"\
-L"/*<------------------------------------------------------------------------------------------------->*/\n";
+const wchar_t  RB_HEADER[] = L"/*<------------------------------------------------------------------------------------------------->*/\n/*该文件由residbuilder2生成，请不要手动修改*/\n/*<------------------------------------------------------------------------------------------------->*/\n";
 
 const wchar_t RB_RC2INCLUDE[]=L"#pragma once\n#include <duires.h>\n";
 
+string ws2s(const wstring& ws)
+{
+	_bstr_t t = ws.c_str();
+	char* pchar = (char*)t;
+	string result = pchar;
+	return result;
+}
+
+wstring s2ws(const string& s)
+{
+	_bstr_t t = s.c_str();
+	wchar_t* pwchar = (wchar_t*)t;
+	wstring result = pwchar;
+	return result;
+}
 
 struct IDMAPRECORD
 {
@@ -175,12 +189,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		switch (c)
 		{
-		case _T('i'):strIndexFile=optarg;break;
-		case _T('r'):strRes=optarg;break;
-		case _T('h'):strHead=optarg;break;
-		case _T('n'):strName2ID=optarg;break;
+		case _T('i'):strIndexFile=ws2s(optarg);break;
+		case _T('r'):strRes=ws2s(optarg);break;
+		case _T('h'):strHead=ws2s(optarg);break;
+		case _T('n'):strName2ID=ws2s(optarg);break;
 		case _T('y'):cYes=1;optind--;break;
-		case _T('p'):strSkinPath=optarg;break;
+		case _T('p'):strSkinPath=ws2s(optarg);break;
 		}
 	}
 	if(strIndexFile.empty())
