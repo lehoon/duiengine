@@ -2,9 +2,9 @@
 #include "Dui3DPreview.h"
 
 #ifdef _DEBUG
-#pragma comment(lib,"../image3d/debug_lib/image3d.lib")
+#pragma comment(lib,"debug_lib/image3d.lib")
 #else
-#pragma comment(lib,"../image3d/release_lib/image3d.lib")
+#pragma comment(lib,"release_lib/image3d.lib")
 #endif
 
 namespace DuiEngine

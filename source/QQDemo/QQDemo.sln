@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo", "QQDemo.vcproj", "{B001A464-04D2-4844-A274-190B77A7A5FD}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo", "QQDemo.vcxproj", "{B001A464-04D2-4844-A274-190B77A7A5FD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DUIEngine", "..\DUIEngine\DUIEngine.vcproj", "{569DE3F2-641F-4CDB-B401-3C731312E844}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DUIEngine", "..\DUIEngine\DUIEngine.vcxproj", "{569DE3F2-641F-4CDB-B401-3C731312E844}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

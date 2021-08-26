@@ -3,32 +3,6 @@
 /////////////////////////////////////////////////////////////////////////////
 #pragma once
 
-struct SkinInfo
-{
-	CDuiStringT strType;
-	CDuiStringT strName;
-	CDuiStringT strSrc;
-
-	union{
-		struct{
-		int			nState;
-		BOOL		bTile;
-		BOOL		bVertical;
-		CRect		rcMargin;
-		};
-		struct{
-			COLORREF	crUp[4];
-			COLORREF	crDown[4];
-			COLORREF	crBorder;
-		};
-		struct{
-			COLORREF cr1;
-			COLORREF cr2;
-			BOOL dir;
-		};
-	};
-};
-
 class CMainDlg : public CDuiHostWnd
 {
 	friend class CNewSkinDlg;

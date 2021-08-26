@@ -11,6 +11,35 @@
 
 using namespace pugi;
 
+class SkinInfo
+{
+public:
+	SkinInfo() {}
+
+	CDuiStringT strType;
+	CDuiStringT strName;
+	CDuiStringT strSrc;
+
+	union {
+		struct {
+			int			nState;
+			BOOL		bTile;
+			BOOL		bVertical;
+			CRect		rcMargin;
+		};
+		struct {
+			COLORREF	crUp[4];
+			COLORREF	crDown[4];
+			COLORREF	crBorder;
+		};
+		struct {
+			COLORREF cr1;
+			COLORREF cr2;
+			BOOL dir;
+		};
+	};
+};
+
 CMainDlg::CMainDlg() : CDuiHostWnd(_T("IDR_DUI_MAIN_DIALOG"))
 {
 } 
@@ -56,7 +85,7 @@ void CMainDlg::OnRealWndDestroy( CDuiRealWnd *pRealWnd )
 	}
 }
 
-#include "ColourPopup.h"
+#include "colorpicker/ColourPopup.h"
 
 void CMainDlg::OnBtnClick_ProjectOpen()
 {
@@ -311,7 +340,7 @@ void CMainDlg::InitSkinList()
 			xmlNode=xmlNode.first_child();
 			while(xmlNode)
 			{
-				SkinInfo *pSkinInfo=new SkinInfo;
+				SkinInfo *pSkinInfo=new SkinInfo();
 				pSkinInfo->strType=DUI_CA2T(xmlNode.name(),CP_UTF8);
 				pSkinInfo->strName=DUI_CA2T(xmlNode.attribute("name").value(),CP_UTF8);
 				pSkinInfo->strSrc=DUI_CA2T(xmlNode.attribute("src").value(),CP_UTF8);

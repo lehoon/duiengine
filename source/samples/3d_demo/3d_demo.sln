@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3d_demo", "3d_demo.vcproj", "{FF65FE45-DEC8-4B2F-8034-C9C53924852F}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3d_demo", "3d_demo.vcxproj", "{FF65FE45-DEC8-4B2F-8034-C9C53924852F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image3d", "..\image3d\image3d.vcproj", "{E4297462-6655-4BB7-9962-1750B55A5187}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image3d", "..\image3d\image3d.vcxproj", "{E4297462-6655-4BB7-9962-1750B55A5187}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

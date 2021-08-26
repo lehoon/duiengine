@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B001A464-04D2-4844-A274-190B77A7A5FD}</ProjectGuid>
+    <RootNamespace>QQDemo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>./bin\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>./bin\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DUIENGINEPATH)\duiengine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(DUIENGINEPATH)\duiengine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)_d.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(DUIENGINEPATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(DUIENGINEPATH)\duiengine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(DUIENGINEPATH)\duiengine\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(DUIENGINEPATH)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Dui3DView.cpp" />
+    <ClCompile Include="duibuttonex.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="duiembedbutton.cpp" />
+    <ClCompile Include="duiembededit.cpp" />
+    <ClCompile Include="duiturn3dview.cpp" />
+    <ClCompile Include="image3d\3dlib.cpp" />
+    <ClCompile Include="image3d\3dmatrix.cpp" />
+    <ClCompile Include="image3d\3dtransform.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="QQDemo.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UIHander.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dui3DView.h" />
+    <ClInclude Include="duibuttonex.h" />
+    <ClInclude Include="duiembedbutton.h" />
+    <ClInclude Include="duiembededit.h" />
+    <ClInclude Include="duiturn3dview.h" />
+    <ClInclude Include="image3d\3dlib.h" />
+    <ClInclude Include="image3d\3dmatrix.h" />
+    <ClInclude Include="image3d\3dTransform.h" />
+    <ClInclude Include="image3d\PerspectiveTransform.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UIHander.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="duires\QQDemo.ico" />
+    <Image Include="skin\image\00680[26x26x8BPP].png" />
+    <Image Include="skin\image\00692[31x22x8BPP].png" />
+    <Image Include="skin\image\00693[58x22x8BPP].png" />
+    <Image Include="skin\image\allbtn_down.png" />
+    <Image Include="skin\image\allbtn_nor.png" />
+    <Image Include="skin\image\allbtn_over.png" />
+    <Image Include="skin\image\border.png" />
+    <Image Include="skin\image\btn_dropdown.png" />
+    <Image Include="skin\image\btn_dropdown_set.png" />
+    <Image Include="skin\image\btn_get_pswd.png" />
+    <Image Include="skin\image\btn_login_set.png" />
+    <Image Include="skin\image\btn_register.png" />
+    <Image Include="skin\image\btn_sys_close.png" />
+    <Image Include="skin\image\btn_sys_min.png" />
+    <Image Include="skin\image\btn_wnd_checkbox.png" />
+    <Image Include="skin\image\btn_wnd_radio.png" />
+    <Image Include="skin\image\BT_KEY_BOARD.png" />
+    <Image Include="skin\image\check.png" />
+    <Image Include="skin\image\checkbox_icon.png" />
+    <Image Include="skin\image\dlg_bg_frame.png" />
+    <Image Include="skin\image\focus_checkbox.png" />
+    <Image Include="skin\image\focus_radio.png" />
+    <Image Include="skin\image\gray_border.png" />
+    <Image Include="skin\image\header.png" />
+    <Image Include="skin\image\head_bkg.png" />
+    <Image Include="skin\image\icons.png" />
+    <Image Include="skin\image\img_edit_border.png" />
+    <Image Include="skin\image\img_edit_border2.png" />
+    <Image Include="skin\image\img_edit_border_set.png" />
+    <Image Include="skin\image\imoffline.png" />
+    <Image Include="skin\image\keyboard1.png" />
+    <Image Include="skin\image\keyboard2.png" />
+    <Image Include="skin\image\login_2code_button.PNG" />
+    <Image Include="skin\image\login_body1.png" />
+    <Image Include="skin\image\login_btn_down.png" />
+    <Image Include="skin\image\login_btn_hover.png" />
+    <Image Include="skin\image\login_btn_normal.png" />
+    <Image Include="skin\image\login_button.png" />
+    <Image Include="skin\image\login_button2.PNG" />
+    <Image Include="skin\image\login_foot_bk.PNG" />
+    <Image Include="skin\image\LOGIN_LIST_CLOSE.png" />
+    <Image Include="skin\image\login_set_bk1.PNG" />
+    <Image Include="skin\image\login_set_bk2.PNG" />
+    <Image Include="skin\image\login_set_title.PNG" />
+    <Image Include="skin\image\menu.png" />
+    <Image Include="skin\image\menuborder.png" />
+    <Image Include="skin\image\menuskin.png" />
+    <Image Include="skin\image\menu_bkg_board.png" />
+    <Image Include="skin\image\menu_split_horz.png" />
+    <Image Include="skin\image\scrollbar.bmp" />
+    <Image Include="skin\image\set_btn_down.png" />
+    <Image Include="skin\image\set_btn_hover.png" />
+    <Image Include="skin\image\set_btn_normal.png" />
+    <Image Include="skin\image\small_head.jpg" />
+    <Image Include="skin\image\status_busy.png" />
+    <Image Include="skin\image\status_invisible.png" />
+    <Image Include="skin\image\status_leave.png" />
+    <Image Include="skin\image\status_online.png" />
+    <Image Include="skin\image\status_qme.png" />
+    <Image Include="skin\image\status_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QQDemo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="duires\winres.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="skin\index.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building XML Resource</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(DUIENGINEPATH)\tool\residbuilder2.exe" -i "%(FullPath)" -y -p skin -r .\duires\winres.rc2
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">skin\xml\dlg_main.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\duires\winres.rc2;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building XML Resource</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(DUIENGINEPATH)\tool\residbuilder2.exe" -i "%(FullPath)" -y -p skin -r .\duires\winres.rc2
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">skin\xml\dlg_main.xml;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\duires\winres.rc2;%(Outputs)</Outputs>
+    </CustomBuild>
+    <Xml Include="skin\xml\dlg_main.xml" />
+    <Xml Include="skin\xml\dlg_msgbox.xml" />
+    <Xml Include="skin\xml\init.xml" />
+    <Xml Include="skin\xml\menu_status1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
